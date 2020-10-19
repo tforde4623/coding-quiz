@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+
+    <link rel="stylesheet" href="./Assets/style/style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="high-scores"><a href="#">Highscores</a></div>
+        <!-- timer div (score) remove temp placeholder-->
+        <div id="time">Temp</div>
+    </nav>
+
+    <main class="main-content" id="notCurrect">
+        <!-- see about id/class -->
+        <div id="start-screen" class="start">
+            <h1>Coding Quiz</h1>
+            <p>
+                Answer the following programming questions. Rules: Time will be used as your 'score'. Finish before the
+                time runs out. If you decided you want to get a question wrong, you will be docked time for that
+                question. You will be given 20 seconds to answer each of the questions. Good luck!
+            </p>
+            <button id="start-quiz">Let's Go!</button>
+        </div>
+
+        <div id="quiz-screen" class="notCurrect">
+            <!-- load each question TEXT into the h2 -->
+            <h2 id="qHead"></h2>
+            <!-- load each question ANSWER into the answers div -->
+            <div id='answers'></div>
+        </div>
+
+        <div id="end-screen" class="notCurrent">
+            <!-- maybe add an input instead of hardcoded to say win or lose -->
+            <h2>Finished Quiz.</h2>
+            <p id="score-input"></p>
+            <p>
+                Enter name: <input type="text" id="userName" />
+                <button id="submit-userName">Submit Score</button>
+            </p>
+        </div>
+    </main>
+
+    <script src="./Assets/js/index.js"></script>
+</body>
+
+</html>

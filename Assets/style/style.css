@@ -1,0 +1,28 @@
+#high-scores {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+#time {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.start {
+    text-align: center;
+}
+
+.main-content {
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;
+    max-width: 750px;
+}
+
+/* if not current, set notCurrent as class */
+.notCurrent {
+    display: none;
+}
