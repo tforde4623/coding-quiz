@@ -12,13 +12,13 @@
 <body>
     <nav>
         <div id="high-scores"><a href="#">Highscores</a></div>
-        <!-- timer div (score) remove temp placeholder-->
-        <div id="time">Temp</div>
+        <!-- timer div (score) -->
+        <div id="time"></div>
     </nav>
 
-    <main class="main-content" id="notCurrect">
-        <!-- see about id/class -->
-        <div id="start-screen" class="start">
+    <main class="main-content">
+        <!-- render this first, get rid of it when button is pressed -->
+        <div id="start-screen">
             <h1>Coding Quiz</h1>
             <p>
                 Answer the following programming questions. Rules: Time will be used as your 'score'. Finish before the
@@ -28,7 +28,7 @@
             <button id="start-quiz">Let's Go!</button>
         </div>
 
-        <div id="quiz-screen" class="notCurrect">
+        <div id="quiz-screen" class="notCurrent">
             <!-- load each question TEXT into the h2 -->
             <h2 id="qHead"></h2>
             <!-- load each question ANSWER into the answers div -->
@@ -44,6 +44,8 @@
                 <button id="submit-userName">Submit Score</button>
             </p>
         </div>
+
+        <div id='alert' class='notCurrent'></div>
     </main>
 
     <script src="./Assets/js/index.js"></script>
