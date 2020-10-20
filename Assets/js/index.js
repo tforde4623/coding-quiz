@@ -148,3 +148,17 @@ function end() {
     document.querySelector('#quiz-screen').setAttribute('class', 'notCurrent');
     document.querySelector('#end-screen').setAttribute('class', 'current');
 }
+
+
+// add a listener on submit button that will save the score to local storage
+submitBtnEl.addEventListener('click', function(){
+
+    if(usernameEl.value.length > 0){
+        // if we already have scores, get them, if not, lets create some in this array here
+        let currentScores = JSON.parse(localStorage.getItem('highscores')) || [];
+
+        // push new score as an object (JSON format)
+        currentScores.push({score: timeLeft, name: usernameEl.value});
+    }
+
+});
