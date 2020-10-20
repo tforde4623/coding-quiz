@@ -54,3 +54,11 @@
     width: auto;
     padding: 5px;
 }
+
+/* style for high score list list els */
+#highscore-list li {
+    font-size: 120%;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: grey solid 1px;
+}

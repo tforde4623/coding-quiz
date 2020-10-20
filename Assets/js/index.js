@@ -27,7 +27,7 @@ let interval;
 // assuming 5 questions 5x20
 let timeLeft = 100;
 
-// start the game when start button is pressed
+// listener to start game when start button is pressed
 startBtnEl.addEventListener('click', function(event) {
     event.preventDefault();
     // hide start screen
@@ -57,9 +57,18 @@ startBtnEl.addEventListener('click', function(event) {
     // call function to handle question page and get question
     questionPage();
 });
-
-
 // !!! create a function to handle attributes in question page function! !!!
+
+
+// listeners to submit name and score if submit or enter is pressed
+usernameEl.addEventListener('keypress', function(e) {
+    if(e.key === 'Enter') {
+        submit();
+    }
+});
+
+unSubmitEl.addEventListener('click', submit);
+
 
 // to allow grabbing of FIRST current question
 let questionIndex = 0;
@@ -91,8 +100,9 @@ function questionPage() {
 }
 
 // init. outside function, so I can use it in another function
-let responseStatus;
+//let responseStatus;
 function btnClick(btnPressed) {
+    let responseStatus;
     // note: btnPressed arguement will return number 0-3 if 4 answers so we can compare
     // save current question to variable for easier access
     let currentQuestion = Questions[questionIndex];
@@ -120,7 +130,7 @@ function btnClick(btnPressed) {
     document.querySelector('#alert').setAttribute('class', 'current');
     let timeOut = setTimeout(function() {
         document.querySelector('#alert').setAttribute('class', 'notCurrent')
-    }, 500);
+    }, 750);
 
 
     // move to next question after comparison
@@ -166,14 +176,4 @@ function submit() {
         }, 3000);
     }
 }
-
-// add a listener to input text element to run submit() if enter is pressed
-usernameEl.addEventListener('keypress', function(e) {
-    if(e.key === 'Enter') {
-        submit();
-    }
-});
-
-// add a listener on submit button that will save the score to local storage
-unSubmitEl.addEventListener('click', submit);
 
