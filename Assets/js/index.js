@@ -1,3 +1,7 @@
+// import function from scorePage.js
+
+
+
 // save html elements in variables for easier access
 // !!!!! NEED TO MAKE THE ALERT FLASH AND THEN GO TO NEXT PAGE, CHECK LAST
 // !!!!! QUESTION FOR EXAMPLE
@@ -144,4 +148,3 @@ function end() {
     document.querySelector('#quiz-screen').setAttribute('class', 'notCurrent');
     document.querySelector('#end-screen').setAttribute('class', 'current');
 }
-
