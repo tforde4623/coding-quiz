@@ -1,4 +1,6 @@
 // save html elements in variables for easier access
+// !!!!! NEED TO MAKE THE ALERT FLASH AND THEN GO TO NEXT PAGE, CHECK LAST
+// !!!!! QUESTION FOR EXAMPLE
 let startBtnEl = document.querySelector('#start-quiz');
 let timeEl = document.querySelector('#time');
 let questionEl = document.querySelector('#quiz-screen');
@@ -135,12 +137,9 @@ function btnClick(btnPressed) {
 
 
 function end() {
-    // stop the time (if theres time left and you didnt LOSE)
-    // added the if statement because when it ends, if you got the last question wrong
-    // it needs to update still, without this, it'll end before the timer updates.
-    if(responseStatus==='Wrong') {
-        timeEl.textContent = timeLeft;
-    }
+    // stop the time (if theres time left)
+    // need to update score (when the game ends in case you got the last question wrong)
+    timeEl.textContent = timeLeft;
     clearInterval(interval); // had id from variable
     document.querySelector('#quiz-screen').setAttribute('class', 'notCurrent');
     document.querySelector('#end-screen').setAttribute('class', 'current');
