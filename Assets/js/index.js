@@ -13,11 +13,11 @@ let alertEl = document.querySelector('#alert');
 
 // questions object
 let Questions = [{
-    'questionHead':'Temporary question!! What is your favorite color? Hope its not shitty!',
+    'questionHead':'Temporary question!! What is my favorite color? Hope its not shitty!',
     'answers':['shit-brown', 'diarrea-green', 'piss-yellow', 'ass-pink'],
     'correctAnswer':'shit-brown'
 }, {
-    'questionHead':'Again! Not a real question! Whats ur second favorite color?',
+    'questionHead':'Again! Not a real question! Whats my second favorite color?',
     'answers':['orange', 'yellow', 'piss-yellow', 'green'],
     'correctAnswer':'shit-brown'
 }];
