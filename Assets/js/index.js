@@ -17,8 +17,8 @@ let Questions = [{
     'answers':['shit-brown', 'diarrea-green', 'piss-yellow', 'ass-pink'],
     'correctAnswer':'shit-brown'
 }, {
-    'questionHead':'Temporary question!! What is your favorite color? Hope its not shitty!',
-    'answers':['shit-brown', 'diarrea-green', 'piss-yellow', 'ass-pink'],
+    'questionHead':'Again! Not a real question! Whats ur second favorite color?',
+    'answers':['orange', 'yellow', 'piss-yellow', 'green'],
     'correctAnswer':'shit-brown'
 }];
 
