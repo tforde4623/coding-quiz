@@ -34,14 +34,23 @@
     display: contents;
 }
 
-/* styling for each answer to a question */
-.inline-button {
-    /* display block makes them vertically aligned instead of horizontal */
-    display: block;
+.inline-button, .horizontal-button {
     padding: 10px;
     background-color: rebeccapurple;
     margin-top: 5px;
     width: 350px;
     font-size: 130%;
     border: royalblue solid 2px;
+}
+
+/* styling for each answer to a question */
+.inline-button {
+    /* display block makes them vertically aligned instead of horizontal */
+    display: block;
+}
+
+/* styling for buttons on scorePage */
+.horizontal-button {
+    width: auto;
+    padding: 5px;
 }
