@@ -1,7 +1,3 @@
-// import function from scorePage.js
-
-
-
 // save html elements in variables for easier access
 // !!!!! NEED TO MAKE THE ALERT FLASH AND THEN GO TO NEXT PAGE, CHECK LAST
 // !!!!! QUESTION FOR EXAMPLE
@@ -149,16 +145,35 @@ function end() {
     document.querySelector('#end-screen').setAttribute('class', 'current');
 }
 
-
-// add a listener on submit button that will save the score to local storage
-submitBtnEl.addEventListener('click', function(){
-
+// put this in a function instead of a listener instead of having two
+// of the same listeners, I was repeating myself doing that
+function submit() {
     if(usernameEl.value.length > 0){
         // if we already have scores, get them, if not, lets create some in this array here
         let currentScores = JSON.parse(localStorage.getItem('highscores')) || [];
 
-        // push new score as an object (JSON format)
+        // push new score as an object (JSON format) to empty list or other scores
         currentScores.push({score: timeLeft, name: usernameEl.value});
+        let scores = JSON.stringify(currentScores);
+        localStorage.setItem('highscores', scores);
+        location.href = 'scorePage.html';
+    } else {
+        // flash a message if they don't put in any initials/ a name
+        document.querySelector('#alert').textContent = `Please input valid initials to submit.`;
+        document.querySelector('#alert').setAttribute('class', 'current');
+        let timeOut = setTimeout(function() {
+            document.querySelector('#alert').setAttribute('class', 'notCurrent')
+        }, 3000);
     }
+}
 
+// add a listener to input text element to run submit() if enter is pressed
+usernameEl.addEventListener('keypress', function(e) {
+    if(e.key === 'Enter') {
+        submit();
+    }
 });
+
+// add a listener on submit button that will save the score to local storage
+unSubmitEl.addEventListener('click', submit);
+
