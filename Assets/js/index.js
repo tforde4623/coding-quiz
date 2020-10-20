@@ -37,7 +37,7 @@ startBtnEl.addEventListener('click', function(event) {
     questionEl.setAttribute('class', 'current');
 
     // push STARTING time to counter, only happens once
-    timeEl.textContent = timeLeft;
+    timeEl.textContent = `Time: ${timeLeft}`;
 
     // start the timer and set interval to tic every second
     interval = setInterval(function(){
@@ -46,7 +46,7 @@ startBtnEl.addEventListener('click', function(event) {
         timeLeft--;
         
         // changing timer in corner every second
-        timeEl.textContent = timeLeft;
+        timeEl.textContent = `Time: ${timeLeft}`;
 
         if(timeLeft <= 0) {
             end();
@@ -149,7 +149,7 @@ function btnClick(btnPressed) {
 function end() {
     // stop the time (if theres time left)
     // need to update score (when the game ends in case you got the last question wrong)
-    timeEl.textContent = timeLeft;
+    timeEl.textContent = `Time: ${timeLeft}`;
     clearInterval(interval); // had id from variable
     document.querySelector('#quiz-screen').setAttribute('class', 'notCurrent');
     document.querySelector('#end-screen').setAttribute('class', 'current');
